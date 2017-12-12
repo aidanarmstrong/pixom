@@ -1,0 +1,166 @@
+@CHARSET "ISO-8859-1";
+
+#main-nav-container{
+	position: fixed;
+	width: 100%;
+	height: 45px;
+	background: linear-gradient(rgb(58, 216, 85), rgb(84, 175, 28));
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	z-index: 1000;
+}
+.pini-logo {
+	position: absolute;
+	top: 2px;
+	width: 150px;
+	height: 40px;
+	margin-left: 100px;
+	
+}
+.pini-logo img{
+	width: 100%;
+	height: 100%;
+}
+.pini-logo p{
+	position: absolute;
+	left: 52px;
+	top: -8px;
+	color: white; 
+	font-family: 'Covered By Your Grace', sans-serif;
+	font-size: 50px
+}
+.friends-search-bar-container {
+    width: 220px;
+    height: 45px;
+    margin-left: 42%;
+}
+.friends-search-bar{
+	width: 95%;
+	height: 30px;
+	margin-top: 7px;
+	padding-left: 10px;
+	border-radius: 80px;
+	border: none;
+	box-shadow: 0 0 0 rgba(0,0,0,0.8), -0 0 1px rgba(0,0,0,0.8);
+}
+.friends-search-btn {
+    position: absolute;
+    top: 7px;
+    margin-left: 180px;
+    width: 30px;
+    background-color: transparent;
+    background-image: url(../Pini-img/Icons/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-size: 15px 15px;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+}
+.friends-search-bar:focus, .friends-search-btn:focus, .text:focus{
+	outline: none;
+}
+#pf-container{
+	position: absolute;
+	width: 40px;
+	top: 0px;
+	height: 40px;
+	margin-left: 93%;
+}
+.profile-img{
+	margin-top: 1px;
+	width: 100%;
+	height: 100%;
+	padding: 2px;
+	border-radius: 100px;
+	cursor: pointer;
+}
+.profile-img:hover{
+	background: rgba(255,255,255,0.5)
+}
+.pf-img, .pf-icon, .pf-pic{
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+}
+#pf-section {
+    position: absolute;
+    display: none;
+    margin-top: 6px;
+    left: 88%;
+    width: 80px;
+    height: 100px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 20px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+.drp-dwn-caret,.caret-in, .caret-out {
+	position: absolute;
+    top: -10px;
+    left: 80px;
+    width: 18px;
+    height: 10px;
+    float: left;
+    overflow: hidden;
+}
+.caret-in,.caret-out{
+	top: 3px;
+    left: 1px;
+    width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 12px solid #fff;
+}
+   
+#pf-section a {
+	text-decoration: none;
+	color: rgba(35,35,35,0.4);
+}
+#pf-section a:hover {
+	color: #fff;
+}
+.arrow {
+    position: absolute;
+    top: -12px;
+    left: 80px;
+    color: #fff;
+}
+#pf-section ul li{
+	list-style-type:none;
+	text-align: center;
+	padding: 2px;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 3px;
+	color: rgba(35,35,35,0.4);
+}
+#pf-section ul li:hover {
+	background: rgb(58, 216, 85);
+	color: #fff;
+}
+.nav-container {
+    position: absolute;
+    top: 0px;
+    margin-left: 60%;
+    width: 31%;
+    height: 100%;
+}
+.nav-container ul{
+	
+}
+.nav-container ul li {
+	list-style-type: none;
+	float: left;
+	margin-left: 40px;
+	padding: 13px;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+.nav-container ul li:hover{
+	border-bottom: 2px solid #fff;
+}

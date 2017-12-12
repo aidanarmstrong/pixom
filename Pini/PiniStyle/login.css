@@ -1,0 +1,206 @@
+@CHARSET "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+*{
+ 	margin: 0;
+ 	padding: 0;
+}
+body{
+	background: #edf7ef;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#header{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	background: linear-gradient(#49fd49, #acf1a4);
+	box-shadow: 0 1px 0 rgba(35,35,35,0.3), 0 -1px 0 rgba(35,35,35,0.3);
+}
+.logo {
+    position: absolute;
+    width: 50%;
+    margin-left: 350px;
+    margin-top: 20px;
+    height: 80%;
+}
+.l-g{
+	width: 60%;
+	height: 100px;
+	margin-left: 140px;
+}
+.l-g img {
+    width: 80px;
+    height: 73%;
+    margin-left: 48px;
+    margin-top: 10px;
+}
+.l-g p{
+	position: absolute;
+	left: 249px;
+	top: -10px;
+	color: white;
+	font-family: 'Covered By Your Grace', sans-serif;
+	font-size: 100px;
+}
+.slogan {
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    margin-left: 175px;
+    margin-top: 30px;
+}
+.slogan p {
+	margin-top: 5px;
+	margin-left: 25px;
+	font-family: 'Indie Flower',sans-serif;
+	font-size: 40px;
+	color: #fff;
+}
+#login-container{
+	position: absolute;
+	margin-top: 25%;
+	margin-left: 28%;
+	width: 45%;
+	height: 40%;
+}
+.lg-in-form{
+	margin-left: 25%;
+	width: 50%;
+	height: 100%;
+
+}
+.lgin{
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bolder;
+	font-size: 30px;
+	margin-left: 50px;
+	color: rgba(35, 35, 35,0.5);
+}
+.lg-user, .lg-pass {
+	margin-top: 30px;
+	width: 93%;
+	height: 10px;
+	padding: 10px;
+	border-radius: 15px;
+	border: 1px solid transparent;
+	box-shadow: 0 0 0  rgba(35,35,35,0.5),-0 0 1px  rgba(35,35,35,0.5);
+}
+.lg-btn,.signup-btn {
+	margin-top: 15px;
+	margin-left: 20px;
+	width: 50px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 0  rgba(35,35,35,0.5),-0 0 1px  rgba(35,35,35,0.5);
+	background: linear-gradient(rgb(58, 216, 85), rgb(84, 175, 28));
+	padding-left: 115px;
+	padding-right: 155px;
+	font-weight: bold;
+	font-size: 15px;
+	color: white;
+	cursor: pointer;
+}
+.lg-btn:hover,.signup-btn:hover{
+	background: linear-gradient(rgb(58, 216, 85), rgb(84, 155, 28));
+}
+.lg-user:focus, .lg-pass:focus, .lg-btn:focus{
+	outline: none;
+	border:1px solid rgba(58, 216, 85,0.5);
+}
+.lne{
+	color: rgba(35,35,35,0.3);
+}
+.sign-up-hdr{
+	position: relative;
+	margin-left: 45px;
+	top: 5px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: rgba(35,35,35,0.5);
+}
+.sign-up-hdr a {
+	text-decoration: none;
+	padding: 3px;
+	background: linear-gradient(rgb(58, 216, 85), rgb(84, 175, 28));
+	color: #fff;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.sign-up-hdr a:hover{
+	background: linear-gradient(rgb(58, 216, 85), rgb(84, 155, 28));
+}
+#signup-container{
+	position: absolute;
+	display: none;
+	margin-top: 45%;
+	width: 99.8%;
+	height: 75%;
+	background: #dfe2df;
+}
+.signup{
+	width: 30%;
+	height: 90%;
+	margin-top: 50px;
+	margin-left: 480px;
+	font-size: 12px;
+}
+.sign-up-form{
+	margin-left: 75px;
+}
+#username,#fname, #lname, #email,#phone, #DOBMonth,#DOBDay,#DOBYear,#pin,#password, #password2 {
+  	height: 30px;
+  	width: 80%;
+  	margin-bottom: 10px;
+  	-webkit-appearance: none;
+  	background: white;
+  	border: 1px solid transparent;
+  	border-radius: 5px; 
+ 	padding: 0 5px;
+  	box-sizing: border-box;
+  	box-shadow: 0 0 0 rgba(35,35,35,0.5),-0 0 1px  rgba(35,35,35,0.9);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none; 
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+#phone{
+	apearance: textfield;
+}
+.signup-btn {
+    margin-left: 0px;
+    padding-left: 80px;
+    padding-right: 185px;
+}
+#pin,#DOBMonth,#DOBDay,#DOBYear{
+	max-width: 80px !important;
+}
+#DOBMonth,#DOBDay,#DOBYear{
+	height: 30px !important;
+	vertical-align: top
+}
+ #username:focus,#fname:focus, #lname:focus, #email:focus, #phone:focus, #pin:focus,#password:focus, #password2:focus,
+ #DOBMonth:focus,#DOBDay:focus,#DOBYear:focus  {
+   	outline: none;
+	border-color: rgba(58, 216, 85,0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

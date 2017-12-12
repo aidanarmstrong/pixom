@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> NIXo | Drama</title>
+    </head> 
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,500');
+            body {
+                background-color:rgb(34, 35, 35);;
+                
+            }
+            #selection-menu {
+                position: fixed;
+                
+                width: 22%;
+                height: 98%;
+                background-color: rgba(0,0,0,0.8);
+                border-radius: 20px;
+            }
+            .selection-menu-heading {
+                position: fixed;
+                top: 4%;
+                left: 7.5%;
+                font-family: 'Roboto',sans-serif;
+                font-size: 33px; 
+                color: darkorange;
+            }
+            #searchbar-wrap {
+                position: fixed;
+                top: 14%;
+                width: 20%;
+                left: 2%;
+                
+            }
+            #searchbar {
+                position: absolute;
+                left: 2%;
+                width: 100%;
+                height: 20px;
+            }
+            #searchbar:hover {
+                background-color: rgba(0,0,0,1);
+            }
+            #searchbtn {
+                background-color: darkorange;
+                border-color:transparent;
+                right: 1%;
+                height: 40px
+                width: 50px;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                color: white;
+            }
+            #searchbtn:hover {
+                cursor: pointer;
+                font-size: 12px;
+            }
+            #romance-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 25%;
+                left: 20%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+            #romance-btn:hover {
+                cursor: pointer;
+            }
+            #comedy-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 40%;
+                left: 19%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+            #comedy-btn:hover {
+                cursor: pointer;
+            }
+            #horror-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 55%;
+                left: 18%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+            #horror-btn:hover {
+                cursor: pointer;
+            }
+            #tragedy-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 70%;
+                left: 19%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+            #tragedy-btn:hover {
+                cursor: pointer;
+            }
+            #fantasy-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 85%;
+                left: 19%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+              #fantasy-btn:hover {
+                cursor: pointer;
+            }
+            #movie-listings {
+                position: absolute;
+                left: 22.5%;
+                width: 77.5%;
+                height: 150%;
+                
+            }
+            #movielist-1 {
+                position: absolute;
+                top: 10%;
+                
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-top: 1px solid rgba(255,255,255,0.5);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            .ml-1-img1 {
+                position: absolute;
+                top: 5%;
+                left: 2%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                
+                background-size: 100% 100%;
+            }
+            .ml-1-img1:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-1-img2 {
+                position: absolute;
+                top: 5%;
+                left: 18%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-1-img2:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-1-img3 {
+                position: absolute;
+                top: 5%;
+                left: 34%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-1-img3:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-1-img4 {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-1-img4:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-1-img5 {
+                position: absolute;
+                top: 5%;
+                left: 66%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-1-img5:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-1-img6 {
+                position: absolute;
+                top: 5%;
+                left: 82%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-1-img6:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            #movielist-2 {                                              /* MOVIE LIST 2 */
+                position: absolute;
+                top: 25%;
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            .ml-2-img1 {
+                position: absolute;
+                top: 5%;
+                left: 2%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                
+                background-size: 100% 100%;
+            }
+            .ml-2-img1:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-2-img2 {
+                position: absolute;
+                top: 5%;
+                left: 18%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-2-img2:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-2-img3 {
+                position: absolute;
+                top: 5%;
+                left: 34%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-2-img3:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-2-img4 {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-2-img4:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-2-img5 {
+                position: absolute;
+                top: 5%;
+                left: 66%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-2-img5:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-2-img6 {
+                position: absolute;
+                top: 5%;
+                left: 82%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-2-img6:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            #movielist-3 {                                  /* MOVIE LIST 3 */
+                position: absolute;
+                top: 40%;
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            .ml-3-img1 {
+                position: absolute;
+                top: 5%;
+                left: 2%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                
+                background-size: 100% 100%;
+            }
+            .ml-3-img1:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-3-img2 {
+                position: absolute;
+                top: 5%;
+                left: 18%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-3-img2:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-3-img3 {
+                position: absolute;
+                top: 5%;
+                left: 34%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-3-img3:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-3-img4 {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-3-img4:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-3-img5 {
+                position: absolute;
+                top: 5%;
+                left: 66%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-3-img5:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-3-img6 {
+                position: absolute;
+                top: 5%;
+                left: 82%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-3-img6:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            #movielist-4 {                                  /* MOVIE LIST 4 */
+                position: absolute;
+                top: 55%;
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            .ml-4-img1 {
+                position: absolute;
+                top: 5%;
+                left: 2%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                
+                background-size: 100% 100%;
+            }
+            .ml-4-img1:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-4-img2 {
+                position: absolute;
+                top: 5%;
+                left: 18%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-4-img2:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-4-img3 {
+                position: absolute;
+                top: 5%;
+                left: 34%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-4-img3:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-4-img4 {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-4-img4:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-4-img5 {
+                position: absolute;
+                top: 5%;
+                left: 66%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-4-img5:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-4-img6 {
+                position: absolute;
+                top: 5%;
+                left: 82%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-4-img6:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            #movielist-5 {                                    /* MOVIE LIST 5 */
+                position: absolute;
+                top: 70%;
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            .ml-5-img1 {
+                position: absolute;
+                top: 5%;
+                left: 2%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                
+                background-size: 100% 100%;
+            }
+            .ml-5-img1:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-5-img2 {
+                position: absolute;
+                top: 5%;
+                left: 18%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-5-img2:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-5-img3 {
+                position: absolute;
+                top: 5%;
+                left: 34%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-5-img3:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-5-img4 {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-5-img4:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-5-img5 {
+                position: absolute;
+                top: 5%;
+                left: 66%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-5-img5:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-5-img6 {
+                position: absolute;
+                top: 5%;
+                left: 82%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-5-img6:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            #movielist-6 {                                  /* MOVIE LIST 6 */
+                position: absolute;
+                top: 85%;
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            .ml-6-img1 {
+                position: absolute;
+                top: 5%;
+                left: 2%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                
+                background-size: 100% 100%;
+            }
+            .ml-6-img1:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-6-img2 {
+                position: absolute;
+                top: 5%;
+                left: 18%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-6-img2:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-6-img3 {
+                position: absolute;
+                top: 5%;
+                left: 34%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-6-img3:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-6-img4 {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-6-img4:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-6-img5 {
+                position: absolute;
+                top: 5%;
+                left: 66%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-6-img5:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-6-img6 {
+                position: absolute;
+                top: 5%;
+                left: 82%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-6-img6:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            #movielist-7 {                                  /* MOVIE LIST 7 */
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            .ml-7-img1 {
+                position: absolute;
+                top: 5%;
+                left: 2%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                
+                background-size: 100% 100%;
+            }
+            .ml-7-img1:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-7-img2 {
+                position: absolute;
+                top: 5%;
+                left: 18%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-7-img2:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-7-img3 {
+                position: absolute;
+                top: 5%;
+                left: 34%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-7-img3:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-7-img4 {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-7-img4:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-7-img5 {
+                position: absolute;
+                top: 5%;
+                left: 66%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-7-img5:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            .ml-7-img6 {
+                position: absolute;
+                top: 5%;
+                left: 82%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-size: 100% 100%;
+            }
+            .ml-7-img6:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+
+        </style>
+        <div id="selection-menu">
+            <h1 class="selection-menu-heading">Drama</h1>
+            <form id="searchbar-wrap" action="http://nixo.uk/dramasearch.php/" method="POST">
+                    <input ic="searchbar" type="text" name="search" placeholder="  Search.."/>
+                    <input id="searchbtn" type="submit" value="Go"/>
+            </form>
+            <input type="button" value="Romance" id="romance-btn"/>
+            <input type="button" value="Comedy" id="comedy-btn"/>
+            <input type="button" value="Horror" id="horror-btn"/>
+            <input type="button" value="Tragedy" id="tragedy-btn"/>
+            <input type="button" value="Fantasy" id="fantasy-btn"/>
+            </form>
+            
+        </div>
+        <div id="movie-listings">
+            <div id="movielist-1">
+               <img class="ml-1-img1"src="img/Drama.jpg">
+               <img class="ml-1-img2"src="img/insurgent.jpg">
+               <img class="ml-1-img3"src="img/interstellar.jpg">
+               <img class="ml-1-img4"src="img/xxl.jpg">
+               <img class="ml-1-img5"src="img/middle-men.jpg">
+               <img class="ml-1-img6"src="img/san-andreas.jpg">
+
+            </div>
+            <div id="movielist-2">
+                <img class="ml-2-img1"src="img/the-dark-knight.jpg">
+                <img class="ml-2-img2"src="img/the-imitation-game.jpg">
+                <img class="ml-2-img3"src="img/the-krays.jpg">
+                <img class="ml-2-img4"src="img/tomorrowland.jpg">
+                <img class="ml-2-img5"src="img/shawshank-redemption.jpg">
+                <img class="ml-2-img6"src="img/forest-grump.jpg">
+        
+            </div>
+            <div id="movielist-3">
+                <img class="ml-2-img1"src="img/fight-club.jpg">
+                <img class="ml-2-img2"src="img/gladiator.jpg">
+                <img class="ml-2-img3"src="img/the-shallows.jpg">
+                <img class="ml-2-img4"src="img/fifty-shades-darker.jpg">
+                <img class="ml-2-img5"src="img/Sully-2016-.jpg">
+                <img class="ml-2-img6"src="img/fantastic-beasts-cover.jpg">
+        
+            </div>
+            <div id="movielist-4">
+                <img class="ml-2-img1"src="img/the-choice.jpg">
+                <img class="ml-2-img2"src="img/bleed-for-this.jpg">
+                <img class="ml-2-img3"src="img/pele.jpg">
+                <img class="ml-2-img4"src="img/13-hours.jpg">
+                <img class="ml-2-img5"src="img/silence.jpg">
+                <img class="ml-2-img6"src="img/hologram_for_the_king.jpg">
+        
+            </div>
+            <div id="movielist-5">
+                <img class="ml-2-img1"src="img/joy.jpg">
+                <img class="ml-2-img2"src="img/safe-haven.jpg">
+                <img class="ml-2-img3"src="img/brooklyn.jpg">
+                <img class="ml-2-img4"src="img/spotlight.jpg">
+                <img class="ml-2-img5"src="img/straight-outta-compton.jpg">
+                <img class="ml-2-img6"src="img/focus.jpg">
+        
+            </div>
+            <div id="movielist-6">
+                <img class="ml-2-img1"src="img/The_Maze_Runner.jpg">
+                <img class="ml-2-img2"src="img/sorched-trials.jpg">
+                <img class="ml-2-img3"src="img/Boyhood.jpg">
+                <img class="ml-2-img4"src="img/now-you-see-me.jpg">
+                <img class="ml-2-img5"src="img/transcendence.jpg">
+                <img class="ml-2-img6"src="img/whiplash.jpg">
+        
+            </div>
+            <div id="movielist-7">
+                <img class="ml-2-img1"src="img/Need-For-Speed.jpg">
+                <img class="ml-2-img2"src="img/wolf-of-wallstreet.jpg">
+                <img class="ml-2-img3"src="img/rush.jpg">
+                <img class="ml-2-img4"src="img/agent-47.jpg">
+                <img class="ml-2-img5"src="img/entourage.jpg">
+                <img class="ml-2-img6"src="img/ex-machina.jpg">
+        
+            </div>
+        </div>
+    </body>
+
+
+</html>

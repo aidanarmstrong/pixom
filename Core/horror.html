@@ -1,0 +1,279 @@
+
+<html>
+    <head>
+        <title> NIXo | Horror</title>
+    </head> 
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,500');
+            body {
+                background-color:rgb(34, 35, 35);;
+                
+            }
+            #selection-menu {
+                position: fixed;
+                
+                width: 22%;
+                height: 98%;
+                background-color: rgba(0,0,0,0.8);
+                border-radius: 20px;
+            }
+            .selection-menu-heading {
+                position: fixed;
+                top: 4%;
+                left: 7.5%;
+                font-family: 'Roboto',sans-serif;
+                font-size: 33px; 
+                color: darkorange;
+            }
+            #searchbar {
+                position: fixed;
+                top: 14%;
+                left: 4%;
+            }
+            input[type=text] {
+                text-align: center;
+                width: 180px;
+                height: 20px;
+                background-color: darkslategrey;
+                border: 0.1px solid grey;
+                border-radius: 10px;
+                font-family: 'Evo', sans-serif;
+                font-size: 18px;
+                color: darkorange;
+            }
+            input[type=text]:hover {
+                background-color: rgba(0,0,0,1);
+            }
+            #searchbtn {
+                padding: 2px;
+                background-color: darkslategrey;
+                border: 1px solid grey;
+                border-radius: 100%;
+                font-family: 'Evo', sans-serif;
+                font-size: 15px;
+                color: white
+            }
+            #searchbtn:hover {
+                cursor: pointer;
+                background-color: rgba(0,0,0,0.8);
+                color: darkorange
+            }
+            #romance-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 25%;
+                left: 20%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+            #romance-btn:hover {
+                cursor: pointer;
+            }
+            #comedy-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 40%;
+                left: 19%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+            #comedy-btn:hover {
+                cursor: pointer;
+            }
+            #horror-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 55%;
+                left: 18%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+            #horror-btn:hover {
+                cursor: pointer;
+            }
+            #tragedy-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 70%;
+                left: 19%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+            #tragedy-btn:hover {
+                cursor: pointer;
+            }
+            #fantasy-btn {
+                position: absolute;
+                width: 50%;
+                height: 6%;
+                top: 85%;
+                left: 19%;
+                background-color: transparent;
+                border-color: transparent;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 25px;
+                color: darkorange
+            }
+              #fantasy-btn:hover {
+                cursor: pointer;
+            }
+            #movie-listings {
+                position: absolute;
+                left: 22.5%;
+                width: 77.5%;
+                height: 150%;
+                
+            }
+            #movielist-1 {
+                position: absolute;
+                top: 10%;
+                
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-top: 1px solid rgba(255,255,255,0.5);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            #ml-1-img1 {
+                position: absolute;
+                top: 5%;
+                left: 2%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-image: url(img/horror.jpg);
+                background-size: 100% 100%;
+            }
+            #ml-1-img1:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            #ml-1-img2 {
+                position: absolute;
+                top: 5%;
+                left: 16%;
+                width: 150px;
+                height: 130px;
+                border-radius: 10px;
+                background-image: url(img/drama.jpg);
+                background-size: 100% 100%;
+            }
+            #ml-1-img2:hover {
+                cursor: pointer;
+                width: 153px;
+                height: 133px;
+            }
+            #movielist-2 {
+                position: absolute;
+                top: 100%;
+                
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            #movielist-3 {
+                position: absolute;
+                top: 200%;
+               
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            #movielist-4 {
+                position: absolute;
+                top: 300%;
+                
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            #movielist-5 {
+                position: absolute;
+                top: 400%;
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            #movielist-6 {
+                position: absolute;
+                top: 500%;
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+            #movielist-7 {
+                position: absolute;
+                top: 600%;
+                width: 100%;
+                height: 150px;
+                background-color: rgba(0,0,0,0.4);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+            }
+
+        </style>
+        <div id="selection-menu">
+            <h1 class="selection-menu-heading">Horror</h1>
+            <form id="searchbar" action="http://nixo.uk/horrorsearch.php/" method="POST">
+                    <input type="text" name="search" placeholder="  Search.."/>
+                    <input id="searchbtn" type="submit" value="Go"/>
+            </form>
+            <input type="button" value="Romance" id="romance-btn"/>
+            <input type="button" value="Comedy" id="comedy-btn"/>
+            <input type="button" value="Horror" id="horror-btn"/>
+            <input type="button" value="Tragedy" id="tragedy-btn"/>
+            <input type="button" value="Fantasy" id="fantasy-btn"/>
+            
+        </div>
+        <div id="movie-listings">
+            <div id="movielist-1">
+                <div id="ml-1-img1">
+                
+
+            </div>
+            <div id="movielist-2">
+                
+        
+            </div>
+            <div id="movielist-3">
+        
+            </div>
+            <div id="movielist-4">
+        
+            </div>
+            <div id="movielist-5">
+        
+            </div>
+            <div id="movielist-6">
+        
+            </div>
+            <div id="movielist-7">
+        
+            </div>
+        </div>
+    </body>
+
+
+</html>
