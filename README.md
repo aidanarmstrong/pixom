@@ -4,18 +4,16 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+An online streaming video service.
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+There is alot of steps to be able to start up this application.
+
+you will need a database connection with it i used localhost with username being root and password having no passsword
+
+for the database of the login and register you can follow the api connection in the folder and map tables to what is in them.
+
 
 ### Contribution guidelines ###
 
